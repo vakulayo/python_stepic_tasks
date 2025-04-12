@@ -34,7 +34,7 @@ dog_owners = {("John", "Malkovic", 22): ["Fido"],
 update_age(dog_owners, ("Jake", "Smirnoff", 18), 22)
 update_age(dog_owners, ("Jake", "Smirnoff", 22), 23)
 update_age(dog_owners, ("Jake", "Smirnoff", 30), 24)
-print(dog_owners.get(("Jake", "Smirnoff", 22)))
-print(dog_owners.get(("Jake", "Smirnoff", 18)))
-print(dog_owners.get(("Jake", "Smirnoff", 23)))
-print(dog_owners.get(("Jake", "Smirnoff", 24)))
+print(dog_owners.get(("Jake", "Smirnoff", 22))) #==None
+print(dog_owners.get(("Jake", "Smirnoff", 18))) #==None
+print(dog_owners.get(("Jake", "Smirnoff", 23))) #==['Butch']
+print(dog_owners.get(("Jake", "Smirnoff", 24))) #==None
