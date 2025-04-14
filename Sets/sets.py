@@ -35,13 +35,32 @@ mother = set(str7.split(', '))
 father = set(str8.split(', '))
 print(number_of_children - len(mother.union(father)))
 
-
-
-#violinist can't speak german
+# violinist can't speak german
 violin = set(str1.split(', '))
 german = set(str2.split(', '))
 print(', '.join(violin.difference(german)))
 
-
-#people who can do only one thing
+# people who can do only one thing
 print(*violin.symmetric_difference(german), sep=', ')
+
+
+# dictionary with all set of friends for every person
+def friends(pairs):
+    friends_dict = dict()
+    for name1, name2 in pairs:
+        friends_dict[name1] = friends_dict.get(name1, set()).union({name2})
+        friends_dict[name2] = friends_dict.get(name2, set()).union({name1})
+
+        # friends_dict.setdefault(name1, set()).add(name2)
+        # friends_dict.setdefault(name2, set()).add(name1)
+    return friends_dict
+
+
+print(friends([("Ivan", "Maria"),
+               ("Ella", "Ivan"),
+               ("Ivan", "Oleg")]))
+# == \
+# {"Ivan":{"Maria", "Ella", "Oleg"},
+#  "Ella":{"Ivan"},
+#  "Maria": {"Ivan"},
+#  "Oleg": {"Ivan"}}
