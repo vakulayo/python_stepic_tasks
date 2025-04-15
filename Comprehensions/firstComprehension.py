@@ -25,3 +25,23 @@ print([x.split(':')[1] for x in s.split()])
 # dict with key - numbers, values - strings
 ss = '73:yjanlou 82:fsbohtg 58:xfuln 1:zshywk'
 print({int(word.split(':')[0]): word.split(':')[1] for word in ss.split()})
+print({int(key): value for key, value in (b.split(':') for b in ss.split())})
+
+
+# first input - number of numbers to input; print summing
+#print(sum([int(input()) for s in range(int(input()))]))
+
+#print with 1 string without symbol '\n' and make in with max 100 symbols
+# 0123456789
+# 1234567890
+# 2345678901
+# 3456789012
+# 4567890123
+# 5678901234
+# 6789012345
+# 7890123456
+# 8901234567
+# 9012345678
+
+[print('0123456789'[i:] + '0123456789'[:i]) for i in range(10)]
+
