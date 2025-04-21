@@ -33,3 +33,12 @@ def write_message(filename, message):
     pass
 
 write_message('/home/ekaterina/Downloads/file.txt', 'I hate Trump')
+
+#append message to file
+def log(filename, message):
+    with open(filename, 'a') as file:
+        file.write(message + '\n')
+    pass
+
+log('/home/ekaterina/Downloads/file.txt', 'I hate Mask too')
+log('/home/ekaterina/Downloads/file.txt', 'I hate Putin most of all')
