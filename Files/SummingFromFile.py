@@ -20,3 +20,29 @@ def minmax_coords(filename):
 
 
 print(minmax_coords('/home/ekaterina/Downloads/points1.txt'))
+
+
+def solved_tasks_without_repeat(filename):
+    result = {}
+    with open(filename) as file:
+        for line in file:
+            if line.splitlines() != ['']:
+                student_id = int(line.split(',')[0])
+                result[student_id] = result.get(student_id, 0) + 1
+    return result
+
+
+print(solved_tasks_without_repeat('/home/ekaterina/Downloads/sudentsresults.txt'))
+
+
+def solved_tasks(filename):
+    result = {}
+    with open(filename) as file:
+        for line in file:
+            if line.splitlines() != ['']:
+                student_id, task_id = map(int, line.strip().split(','))
+                result[student_id] = result.get(student_id, set())
+                result[student_id].add(task_id)
+    return {k: len(v) for k, v in result.items()}
+
+print(solved_tasks('/home/ekaterina/Downloads/sudents_results_with_repetition.txt'))
