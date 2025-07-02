@@ -1,15 +1,15 @@
 # task_1: triangle square
-a, b, c = int(input()), int(input()), int(input())
-p = (a + b + c) / 2
-square = (p * (p - a) * (p - b) * (p - c)) ** 0.5
-print(square)
-
-# task_2: in number in (−15,12]∪(14,17)∪[19,+∞)
-n = int(input())
-if (-15 < n <= 12) or (14 < n < 17) or (n >= 19):
-    print(True)
-else:
-    print(False)
+# a, b, c = int(input()), int(input()), int(input())
+# p = (a + b + c) / 2
+# square = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+# print(square)
+#
+# # task_2: in number in (−15,12]∪(14,17)∪[19,+∞)
+# n = int(input())
+# if (-15 < n <= 12) or (14 < n < 17) or (n >= 19):
+#     print(True)
+# else:
+#     print(False)
 
 # task_3: simple calc +, -, /, *, mod, pow, div,
 first, second = float(input()), float(input())
@@ -60,3 +60,27 @@ if a > b: a, b = b, a
 if b > c: b, c = c, b
 if a > b: a, b = b, a
 print(str(c) + '\n' + str(a) + '\n' + str(b))
+
+# task_6: correct end of the words depends on number
+x = input()
+if (int(x) % 100 >= 11) & (int(x) % 100 <= 19):
+    print(x + ' программистов')
+elif (int(x) % 10 == 1):
+    print(x + ' программист')
+elif (int(x) % 10 >= 2) & (int(x) % 10 <= 4):
+    print(x + ' программиста')
+else:
+    print(x + ' программистов')
+
+# task_7: lucky ticket
+number = int(input())
+a = number // 100000
+b = number // 10000 % 10
+c = number // 1000 % 10
+d = number // 100 % 10
+e = number // 10 % 10
+f = number % 10
+if a + b + c == d + e + f:
+    print("Счастливый")
+else:
+    print("Обычный")
