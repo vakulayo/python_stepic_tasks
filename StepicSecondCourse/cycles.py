@@ -34,7 +34,7 @@ while True:
     print(num)
 
 
-# task for multiply table part
+# task for multiply table part - 2.3
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
 a, b, c, d = 4, 8, 6, 10
 print(' ', end='\t')
@@ -56,7 +56,7 @@ for i in range(a, b + 1):
         num += 1
 print(sum / num)
 
-# task about genome
+# task about genome 2.4 part
 # genome = input()
 genome = 'acggtgttat'
 if len(genome) == 0:
@@ -64,7 +64,7 @@ if len(genome) == 0:
 else:
     print(100 * (genome.upper().count('c'.upper()) + genome.upper().count('g'.upper())) / len(genome))
 
-# task just slices
+# task just slices 2.4 also
 s = 'abcdefghijk'
 print(s[3:6])
 print(s[:6])
@@ -75,7 +75,7 @@ print(s[:-6])
 print(s[-1:-10:-2])
 #def abcdef defghijk kjihgfedcba ijk abcde kigec
 
-# task string coding
+# task string coding 2.4
 # line = input()
 line = 'abc'
 result_line, i = '', 0
@@ -94,7 +94,7 @@ while i < len(line):
 print(result_line)
 
 
-# task string coding
+# task string coding 2.4 second solution
 line = 'aabbcccfdf'
 result_line = ''
 previous = line[0]
