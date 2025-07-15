@@ -1,10 +1,10 @@
-# task_1 from 2.6 summ of square when sum of number is 0
+# task_1 from 2.6 summ of square when the sum of number is 0
 result = num = int(input())
-summ = num*num
+summ = num * num
 while result != 0:
     current = int(input())
-    result+=current
-    summ += current*current
+    result += current
+    summ += current * current
 print(summ)
 
 # task_2 from 2.6 print increment number each time equal times until whole number is reached
@@ -25,7 +25,7 @@ while len(num_list) < desired_num:
     i += 1
 print(*num_list[:desired_num])
 
-# task_3 from 2.6
+# task_3 from 2.6 print all positions where number is number
 line = '5 8 2 7 8 8 2 4'
 number = 8
 positions = []
@@ -38,7 +38,25 @@ else:
     print('Отсутствует')
 
 
-# task_4
+# task_4 input matrix and summing elem
+#enter numbers in one line until 'end' from 2.6
+line = input()
+matrix = []
+while line != 'end':
+    matrix.append(line.split())
+    line = input()
+
+
+weight = len(matrix)
+length = len(matrix[0])
+sum_matrix = [[0 for i in range(length)] for j in range(weight)]
+
+for i in range(weight):
+    for j in range(length):
+        sum_matrix[i][j] = (int(matrix[(i - 1) % weight][j]) + int(matrix[(i + 1) % weight][j]) +
+                            int(matrix[i][(j - 1) % length]) + int(matrix[i][(j + 1) % length]))
+for l in sum_matrix:
+    print(*l)
 
 # task_5 print spiral matrix from 2.6
 # n = int(input())
