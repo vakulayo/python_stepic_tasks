@@ -36,3 +36,38 @@ if len(positions) > 0:
     print(*positions)
 else:
     print('Отсутствует')
+
+
+# task_4
+
+# task_5 print spiral matrix from 2.6
+# n = int(input())
+n = 6
+matrix = [[0 for ii in range(n)] for jj in range(n)]
+if n == 1:
+    matrix[0][0] = 1
+else:
+    i, j = 0, 0
+    direction = 0
+    for k in range(1, n * n + 1):
+        matrix[i][j] = k
+        #check if we reached a border, if yes - change the direction
+        if ((direction % 4 == 0 and j == n - 1) or (direction % 4 == 1 and i == n - 1) or
+                (direction % 4 == 2 and j == 0) or (direction % 4 == 3 and i == 0)):
+            direction += 1
+        #check we reached a non-zero value already, need to change the direction
+        if ((direction % 4 == 0 and matrix[i][j + 1] != 0) or (direction % 4 == 1 and matrix[i + 1][j] != 0) or
+                (direction % 4 == 2 and matrix[i][j - 1]) or (direction % 4 == 3 and matrix[i - 1][j] != 0)):
+            direction += 1
+
+        if direction % 4 == 0:
+            j += 1
+        elif direction % 4 == 1:
+            i += 1
+        elif direction % 4 == 2:
+            j -= 1
+        else:
+            i -= 1
+
+for line in matrix:
+    print(*line)
