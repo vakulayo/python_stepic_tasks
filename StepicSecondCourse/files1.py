@@ -1,5 +1,5 @@
 #task about decode line into file from 3.4
-with open('input.txt', 'r') as file:
+with open('input1.txt', 'r') as file:
     line = file.readline().strip()
 
 with open('output.txt', 'w') as file2:

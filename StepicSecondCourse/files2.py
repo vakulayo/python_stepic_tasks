@@ -1,7 +1,7 @@
 #task about collect text from file and count words. Return most frequent word
 my_dict = dict()
 max_count = 1
-with open('input1.txt', 'r') as file:
+with open('input2.txt', 'r') as file:
     for line in file:
         words = line.lower().split()
         for word in words:
