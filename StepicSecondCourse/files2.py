@@ -1,4 +1,4 @@
-#task about collect text from file and count words. Return most frequent word
+#task about collect text from file and count words. Return most frequent word. from 3.4
 my_dict = dict()
 max_count = 1
 with open('input2.txt', 'r') as file:
